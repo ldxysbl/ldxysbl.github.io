@@ -16,6 +16,19 @@
           font-family: verdana;
           font-size: 20px;
       }
+.but{
+	position:fixed;
+	color:red;
+		
+	}
+	<script>
+		function sj(){
+			var date=new Date();
+			var strDate=date.getHours()+':'+date.geiMinutes()+':'+date.getSecond()+':'+date.getMIlliseconds();
+			document.getElementById("time").innerHTML=sreDate;
+		}
+	</script>
+		
   </style>
     
    </head>
@@ -23,11 +36,11 @@
   <h1>这是一个交作业的网站</h1><br>
   <p>实验：</p><br>
   <ul style="color: white;">
-    <li><a>这是第一个实验：</a></li>
+    <li><a>这是第一个实验：</a></li><br>
   </ul>
   </body>
 
-<button type="button"onclick="document.getElementById('demo').innerHTML = Date()">看一眼时间，实验还没交谁允许你摆烂</button>
+	<button class="but",type="button"onclick="sj()">看一眼时间，实验还没交谁允许你摆烂</button>
 
 
-hello
+
