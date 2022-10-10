@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <title>Task_e</title>
+    <title>Task_c</title>
     <script id="vertex-shader" type="x-shader/x-vertex">
     attribute vec4 vPosition;
     void main(){
@@ -21,17 +21,18 @@
     <script type="text/javascript" src="../df/gl-matrix-min.js"></script>
     <script type="text/javascript" src="../df/initShaders.js"></script>
     <script type="text/javascript" src="../df/webgl-utils.js"></script>
-	<script type="text/javascript" src="../df/gasket-rotate1.js"></script>
+	<script type="text/javascript" src="../df/gasket.js"></script>
 </head>
 <body>
-	<div onload="changeL()">
+	<div onload="changeL()" >
 	<form name="myInput">
-	剖分层次: <input type="text" value="" name="count"> <br />
-	旋转角度: <input type="text" value="" name="angle"> <br />
-	<input type="button" value="确定" onclick="changeL()" /> <br />
+	     输入（0-7）任意数字:<br>
+		<input type="text"  name="count">
+	    <input type="button" value="确定" onclick="changeL()" > <br />
 	</form>
 	</div>
 	<div id="Triangle"></div>
+	<div>再次输入请刷新页面</div>
 </body>
 
 </html>
