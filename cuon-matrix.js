@@ -1,17 +1,3 @@
-// cuon-matrix.js (c) 2012 kanda and matsuda
-/** 
- * This is a class treating 4x4 matrix.
- * This class contains the function that is equivalent to OpenGL matrix stack.
- * The matrix after conversion is calculated by multiplying a conversion matrix from the right.
- * The matrix is replaced by the calculated result.
- */
-
-/**
- * Constructor of Matrix4
- * If opt_src is specified, new matrix is initialized by opt_src.
- * Otherwise, new matrix is initialized by identity matrix.
- * @param opt_src source matrix(option)
- */
 var Matrix4 = function(opt_src) {
   var i, s, d;
   if (opt_src && typeof opt_src === 'object' && opt_src.hasOwnProperty('elements')) {
@@ -219,16 +205,6 @@ Matrix4.prototype.invert = function() {
   return this.setInverseOf(this);
 };
 
-/**
- * Set the orthographic projection matrix.
- * @param left The coordinate of the left of clipping plane.
- * @param right The coordinate of the right of clipping plane.
- * @param bottom The coordinate of the bottom of clipping plane.
- * @param top The coordinate of the top top clipping plane.
- * @param near The distances to the nearer depth clipping plane. This value is minus if the plane is to be behind the viewer.
- * @param far The distances to the farther depth clipping plane. This value is minus if the plane is to be behind the viewer.
- * @return this
- */
 Matrix4.prototype.setOrtho = function(left, right, bottom, top, near, far) {
   var e, rw, rh, rd;
 

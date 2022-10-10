@@ -1,11 +1,3 @@
-// cuon-utils.js (c) 2012 kanda and matsuda
-/**
- * Create a program object and make current
- * @param gl GL context
- * @param vshader a vertex shader program (string)
- * @param fshader a fragment shader program (string)
- * @return true, if the program object was created and successfully made current 
- */
 function initShaders(gl, vshader, fshader) {
   var program = createProgram(gl, vshader, fshader);
   if (!program) {
